@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FEFEFA;
+    height: 100vh;
+    width: 100%;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    background-color: #006D6F;
+    color: #fff;
+    padding: 24px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+nav {
+    background-color: #F0F8FF;
+    padding: 16px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    gap: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1B1B1B;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in;
+}
+
+nav ul li a:hover {
+    background-color: #1B1B1B;
+    color: #fff;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+    text-align: center;
+    color: #1B1B1B;
+}
+
+.right_side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.image {
+    width: 80%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+h2 {
+    display: inline-block;
+    border-bottom: 4px solid #006D6F;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+.introductory_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.introductory_text p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 1rem;
+}
+
+footer {
+    background-color: #006D6F;
+    color: #fff;
+    padding: 28px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+@media screen and (max-width: 600px) {
+    main { 
+        grid-template-columns: 1fr;
+        padding: 0;
+        margin:1rem 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .image {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+
+    .introductory_text {
+        padding: 0 1rem;
+    }
+
+    h2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        padding: 6px 8px;
+        width: inherit;
+    }
+
+    .introductory_text p{
+        font-size: 12px;
+        line-height: 1.7;
+        margin-top: 0.25rem;
+    }
+}
+
